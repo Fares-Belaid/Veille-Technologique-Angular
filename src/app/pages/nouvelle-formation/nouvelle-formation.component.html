@@ -1,0 +1,84 @@
+<div class="main-container">
+  <div class="row min-height-600 no-flex-wrap">
+    <div class="col-md-12 pl-0 pr-0 backgroung-grey border-none">
+      <div class="col pl-0 pr-0 d-flex flex-column justify-content-between">
+
+<div class="card p-3 min-height-80 mb-2">
+  <app-header></app-header>
+</div>
+<div class="col mb-3 card">
+
+  <div class="col-md-12">
+
+    <div class="col mt-3">
+      <form [formGroup]="formationForm">
+        <div class="col-md-12 mb-3">
+          <h4><strong>Sélectionner la photo de formation</strong></h4>
+          <div class="container row">
+            <div class="col-md-6">
+              <input type="file" (change)="onFileChanged($event)" ngDefaultControl formControlName="image" accept="image/*">
+            </div>
+            <div class="col-md-6" *ngIf="myimg">
+              <img [src]="myimg" class="rounded-circle" width="200px" height="200px" name="photo" >
+
+            </div>
+          </div>
+          <hr />
+<!--          <img src="assets\product.png" class="rounded-circle" width="200px" height="200px">-->
+        </div>
+        <div class="col-md-12">
+          <h2><i class="fas fa-info blue-color" ></i>&nbsp; Détails de la formation</h2>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col form-group">
+            <input type="text" formControlName="titre" class="form-control" placeholder="Titre">
+          </div>
+          <div class="col form-group">
+            <input type="text" formControlName="categorie" class="form-control" placeholder="Categorie" >
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col form-group">
+            <textarea placeholder="Description" formControlName="description" class="form-control"></textarea>
+          </div>
+        </div>
+          <div class="container pr-4 ml-3 mb-3" style="margin-top: 20px;">
+            <div class="panel panel-default">
+
+              <div class="panel-body">
+                <strong>Sélectionner un fichier</strong>
+                <hr>
+
+                  <fieldset>
+                    <div class="form-group">
+                      <div>
+                        <input type="file" [src]="myfile" multiple class="form-control" (change)="onChangedPDF($event)" name="document" ngDefaultControl formControlName="document"/>
+                     </div>
+                   </div>
+                  </fieldset>
+
+
+                <br>
+
+
+              </div>
+            </div>
+          </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-12 text-right mb-3">
+    <button class="btn btn-danger mr-3" routerLink="/home"><i class="fas fa-ban"></i>&nbsp;Annuler</button>
+    <button type="submit" class="btn btn-primary" (click)="saveDocument()"><i class="fas fa-save"></i>&nbsp;Enregistrer</button>
+  </div>
+</div>
+<app-footer></app-footer>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #eff2f5 !important;
+}
+.background-grey{
+    background-color: #eff2f5 !important;
+}
+.border-none{
+    border: none !important;
+}
+.min-height-80{
+min-height: 80px;
+}
+.border-right{
+    border-right: solid #eff2f577 !important;
+}
+.custom-border{
+    border: solid #eff2f5;
+    border-radius: 5px;
+}
+.blue-color{
+    color: #0d6efd;
+}
+.margin-left-header{
+    margin-left: 10px;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.main-container{
+  margin: 50px;
+  width: auto;
+}
+.min-height-600{
+  min-height: 600px;
+}
+.no-flex-wrap{
+  flex-wrap: inherit !important;
+}

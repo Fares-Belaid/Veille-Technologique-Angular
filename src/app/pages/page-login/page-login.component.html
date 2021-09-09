@@ -1,0 +1,21 @@
+<div class="container my-container">
+    <div class="card justify-content-md-center">
+            <div class="card-header text-center">
+                  <h3> Se connecter</h3>
+            </div>
+        <form class="card-body" [formGroup]="formGroup"  >
+            <div class="mb-4">
+                <input type="email" class="form-control"  placeholder="E-mail" formControlName="email">
+              </div>
+              <div class="mb-4">
+                <input type="password" class="form-control"  placeholder="Mot de passe" formControlName="password">
+              </div>
+              <div class="mb-4 d-felx  text-center">
+
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+                    <i class="fas fa-check"></i>&nbsp; Se connecter
+                </button>
+              </div>
+        </form>
+    </div>
+</div>

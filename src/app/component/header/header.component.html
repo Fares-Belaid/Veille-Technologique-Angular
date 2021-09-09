@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-8">
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+      <input type="text" class="form-control" placeholder="Rechercher" >
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-8 text-right p-2">
+        <span>Bonjour {{collaborateur.nom}}</span>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col">
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-outline-dark" id="dropdownBasic1" ngbDropdownToggle> <i class="far fa-user"></i></button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem routerLink="/home"><i class="fas fa-home mt-1 mb-3"></i>&nbsp;&nbsp;&nbsp;Accueil</button>
+                <button ngbDropdownItem routerLink="/nouvelle-formation"><i class="far fa-plus-square mt-1 mb-3"></i>&nbsp;&nbsp; Ajouter formation</button>
+                <button ngbDropdownItem (click)="mesFormation()" ><i class="fas fa-folder-open mt-1 mb-3" ></i>&nbsp; Mes formation</button>
+                <button ngbDropdownItem (click)="deconnexion()"><i class="fas fa-sign-out-alt mb-2 mt-1" ></i>&nbsp;&nbsp; Déconnexion</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>

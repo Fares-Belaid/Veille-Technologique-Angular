@@ -1,0 +1,16 @@
+<div class="container  mb-5 ">
+  <form class="d-flex row" [formGroup]="commentaireForm">
+    <div class="d-flex flex-column col-md-12">
+
+      <div class="row p-2 px-4">
+        <div class="d-flex flex-row mt-4 mb-4 mr-3">
+          <input type="text" style="width: 550px" class="form-control mr-4" placeholder="Publier un commentaire " formControlName="commentaire">
+          <button class="btn btn-primary" type="submit" (click)="saveCommentaire()">Commenter</button>
+        </div>
+
+
+
+      </div>
+    </div>
+  </form>
+</div>
